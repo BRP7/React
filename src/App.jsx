@@ -4,10 +4,19 @@ import { useState } from 'react'
 function App() {
   const [count, setCount] = useState(0)
   function increFun(){
-    return setCount(count+1);//u can also write callback inside setFun & access of prev value as paramater of that callback
+    setCount((prev)=>prev+1);
+    setCount((prev)=>prev+1);
+    return setCount((prev)=>prev+1);//u can also write callback inside setFun & access of prev value as paramater of that callback
   }
   function decreFun(){
-    return setCount(count-1);//u can also write callback inside setFun & access of prev value as paramater of that callback
+    //  setCount(count-1);
+    //  setCount(count-1);
+    //  setCount(count-1);
+    //  setCount(count-1);
+    // return setCount(count-1);
+             setCount((prev)=>prev-1);
+             setCount((prev)=>prev-1);
+      return setCount((prev)=>prev-1);
   }
 
   return (
